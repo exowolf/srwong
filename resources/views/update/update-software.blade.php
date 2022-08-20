@@ -1,0 +1,34 @@
+@extends('layouts.blank')
+
+@section('content')
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-2"></div>
+            <div class="col-md-8">
+                @if(session()->has('error'))
+                    <div class="alert alert-danger" role="alert">
+                        {{session('error')}}
+                    </div>
+                @endif
+               
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <form method="POST" action="{{route('update-system')}}">
+                            @csrf
+                            <div class="form-group">
+                                
+                              
+                            </div>
+
+                            <div class="form-group">
+                              
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+@endsection
